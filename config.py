@@ -1,10 +1,10 @@
-import os
-from dotenv import load_dotenv
+from aiogram import Bot, Dispatcher
+from decouple import config
+from aiogram.contrib.fsm_storage.memory import MemoryStorage
 
-# Загрузка .env
-load_dotenv()
+TOKEN = config('TOKEN')
+bot = Bot(token=TOKEN)
+storage = MemoryStorage()
+dp = Dispatcher(bot=bot, storage=storage)
 
-BOT_TOKEN = os.getenv("BOT_TOKEN")
-DATABASE_PATH = os.getenv("DATABASE_PATH", "users.db")
-GOOGLE_SHEETS_CREDENTIALS = os.getenv("GOOGLE_SHEETS_CREDENTIALS")
-GOOGLE_SHEET_ID = os.getenv("GOOGLE_SHEET_ID")
+admin = [7245407556, ]
