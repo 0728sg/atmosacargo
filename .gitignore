@@ -5,3 +5,4 @@ __pycache__
 .env
 music/*.exe
 atmoscargo.json
+config_sheets.py
