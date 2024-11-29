@@ -1,5 +1,15 @@
 from aiogram.types import ReplyKeyboardMarkup, KeyboardButton
 
+cancel_button = ReplyKeyboardMarkup(resize_keyboard=True, one_time_keyboard=True).add(
+    KeyboardButton('Отмена')
+)
+
+submit_button = ReplyKeyboardMarkup(resize_keyboard=True, one_time_keyboard=True).add(
+    KeyboardButton('Да'),
+    KeyboardButton('Нет')
+)
+
+
 # ===============================================================
 
 start = ReplyKeyboardMarkup(resize_keyboard=True,
