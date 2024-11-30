@@ -4,9 +4,9 @@ from aiogram.dispatcher.filters import Text, state
 from aiogram.dispatcher.filters.state import State, StatesGroup
 from aiogram.types import ReplyKeyboardRemove
 import buttons
-from google_sheets.sheets import update_google_sheets
 import random
 from db.db_main import sql_insert_products
+from google_sheets.sheets import update_google_sheets
 
 
 class reg(StatesGroup):
@@ -16,10 +16,10 @@ class reg(StatesGroup):
     submit = State()
 
 
-
 def generate_random_code(length=4):
-    caracteres = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
-    return ''.join(random.choice(caracteres) for _ in range(length))
+    caracteres = ['1', '2', '3', '4', '5', '6', '7', '8', '9']
+    return 'ATM-' + ''.join(random.choice(caracteres) for _ in range(length))
+
 
 
 async def start_reg(message: types.Message):
@@ -48,12 +48,13 @@ async def load_phone(message: types.Message, state: FSMContext):
         text=f'Верные ли данные?\n\n'
              f'Код: {data["code"]}\n'
              f'ФИО: {data["fullname"]}\n'
-             f'Номер телефона: {data["phone"]}\n',
+             f'Ваш номер телефона: {data["phone"]}\n'
+             f'Телефон: 15846020707 \n'
+             f'Адрес: 广州市白云区石沙路石井工业区一横路2号A3栋709室, Ваш код:{data["code"]}\n',
         reply_markup=buttons.submit_button
     )
 
     await state.next()
-
 
 async def submit(message: types.Message, state: FSMContext):
     kb = ReplyKeyboardRemove()
@@ -62,8 +63,11 @@ async def submit(message: types.Message, state: FSMContext):
             code = data['code']
             fullname = data.get('fullname')
             phone = data.get('phone')
+
+
             await update_google_sheets(code, fullname, phone)
             await sql_insert_products(code, fullname, phone)
+
         await message.answer('Отлично, данные сохранены!', reply_markup=kb)
         await state.finish()
     elif message.text == 'Нет':
@@ -71,7 +75,6 @@ async def submit(message: types.Message, state: FSMContext):
         await state.finish()
     else:
         await message.answer('Пожалуйста, выберите "Да" или "Нет".')
-
 
 async def cancel_fsm(message: types.Message, state: FSMContext):
     current_state = await state.get_state()
