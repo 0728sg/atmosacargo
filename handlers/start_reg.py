@@ -89,7 +89,7 @@ async def cancel_fsm(message: types.Message, state: FSMContext):
 def register_start_reg(dp: Dispatcher):
     dp.register_message_handler(cancel_fsm, Text(equals='Отмена', ignore_case=True), state="*")
 
-    dp.register_message_handler(start_reg, commands=['registration'])
+    dp.register_message_handler(start_reg, commands=['get_code'])
     dp.register_message_handler(load_fullname, state=reg.fullname)
     dp.register_message_handler(load_phone, state=reg.phone)
     dp.register_message_handler(submit, state=reg.submit)
