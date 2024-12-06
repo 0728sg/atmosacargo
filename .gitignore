@@ -6,3 +6,4 @@ __pycache__
 music/*.exe
 atmoscargo.json
 config_sheets.py
+db/store.sqlite
