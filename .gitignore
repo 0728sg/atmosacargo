@@ -3,7 +3,4 @@ __pycache__
 .vs
 .venv
 .env
-music/*.exe
-atmoscargo.json
-config_sheets.py
 db/store.sqlite

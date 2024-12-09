@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "atmoscargo",
+  "private_key_id": "d5092fe9abe891ab4241e004fab4d0903b463114",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQCpkNK6KALS5/wI\n6vrDlV0/9fUV0a3hcbUNtTqfn1iXCe7XrQ0tsQ2MGkf/2pmhVY8GPd8JyknYEJaB\nrGUwmv9GpZr2OXdOt9ysJi354fnkdKq5GoxnrwKbqfwkSHz/nE9Q2mhZ6UAA688T\nuh6o4uGGx39CRIELP+BXSocHWXyofTat/BUH9MWgeHVWKc7ZGiw/3gaZLZg18Xjb\nHrbtzMCKM4EOEYCDtUvpQ4GAsZUUxyavKwztG62F2DGvcPqfNgD2RsHPvBDYZ17/\nOFqu0sQ6D49PKqAMZYdBwTtfzhG4H64auWXdb2W28e7wNxGjrlucduOkJT8d7OOn\nSQwOLYHXAgMBAAECggEABWc8Xqin4TzCyAkcRdGn/6+OY9VjTEhwOpqGJ8b85aBd\n5z1cqslIeijJqY7cNEH5fESA4nafhQ5GQzf+6Av078eXBuQDd+XCIFZ9sGxD8Fbv\nrFVWT5vJ/bNunmEUqy8VSxcQUOklpVQndZtlMSTzYmK9eC2eOaXmyh8DxqT3AE8i\nqMj2TS5bGlGjLsVT+mcPxSWwPxlvGx+58p+WvPTOTIz5j3Ua6bMoSuVlbuDg+MvL\nximT1NGYYJcOeCVT/LqWgBpUFtNRkOS895I0AFFCF6LaZ8galBYJquLO/XjcDmR2\nHJWukj7TyjUDeokZ6bRqH9nOPT4pzTkBQwGU+QDyqQKBgQDk0+uxexAVbXLThLyS\nALmxUqDEa9YzJthTRfAwsu9OvqlyMimKEnS4m4PwTU9b2q/PMJv9NRHdNDAbsDQk\nq2hNxIMZ903p3d6Fii47U1OgKPwGUZw3pCUJ0EWXQZkEPN8X9IOG91K40dXQbiQp\nQj3wjQ926pBHh6T4F+ej+L3RSQKBgQC9s2il1V18ll1eCAln7EHHI82dWncgsY1H\nKbtmSEzVa9ZcqiSPv9Q4cdFIuDxWSMS6ku0RH7OB//ZSkF4MbyP2aJbYU4Hvyie+\nonQmLQOc9yONtgA6InX8Cd34DcyiMHBJ8tr5BupwDcnFsI7+6EtbfFZrEGjteGTg\n1SQ0XDHaHwKBgB1jflTYClPGL8YsuQ9DWpYEl7NCaks9hPEE/Xkzsfp6EEcjXCRo\nhGclSge11ihk6MmCY7Zcd4PibP9RXREMlqPORkwyb+ZGYYrjGVbzN71NJjkliBu5\nUCx3fEiV2zIpIznvZGkUIKKuCHjxfGF0KYJYi5DpRUh6ilx2rYBotPBJAoGAbmg/\nzNy8t2lQWAz3ZHu14PAumJlxYh7UagmY3zPPPBuyPGZuNxffrSZZNyi7PUDG9wvS\nXDgGIvBVbcJGapg45w4CVU9s/aG7thEY5qsmQjH4iF7YDP3Hi3Q2s0tcwTzN7cwh\ns/RZd/QebiePYj7StSFNrqxzVVrP46dJlgvem+MCgYAmxX/wE9Q8SMCvslxHS5K5\nTqiAZt/n5M0NfIJ//hn3qsLQS8wBhxSo5iikTn/+y13VriKlmHkeQ6gBkhz4x/9m\nYjglpB0nNHMZEdAX0ETWIDOfe/tV1qmLrfzbQ2aX5EjYHYk5bJT0A2ELFHCEiaHU\ny0DaP78QJZQWAYeyK72qFg==\n-----END PRIVATE KEY-----\n",
+  "client_email": "atmoscargo@atmoscargo.iam.gserviceaccount.com",
+  "client_id": "107081630033740891362",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/atmoscargo%40atmoscargo.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
