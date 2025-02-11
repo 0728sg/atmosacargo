@@ -3,7 +3,6 @@ import time
 from googleapiclient.errors import HttpError
 from google_sheets.config_sheets import service, google_sheets_id_users
 
-# Configure logging
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
