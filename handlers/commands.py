@@ -1,6 +1,5 @@
 from aiogram import types, Bot, Dispatcher
 from aiogram.utils import executor
-import os
 from buttons import start
 from config import bot
 

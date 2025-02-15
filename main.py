@@ -1,11 +1,11 @@
 import logging
 from aiogram import types
 from aiogram.utils import executor
-# from buttons import start_test
+from buttons import start_test
 from config import bot, dp, admin
 from db import db_main
 from handlers import commands, echo, start_reg, track
-from google_sheets import sheets
+
 
 
 async def on_startup(_):
@@ -22,7 +22,7 @@ track.register_track(dp)
 start_reg.register_start_reg(dp)
 
 
-# echo.register_echo(dp)
+echo.register_echo(dp)
 
 if __name__ == '__main__':
     logging.basicConfig(level=logging.INFO)

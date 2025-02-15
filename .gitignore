@@ -5,5 +5,3 @@ __pycache__
 .env
 atmoscargo.json
 db/store.sqlite
-secrets/
-atmoscargo.json

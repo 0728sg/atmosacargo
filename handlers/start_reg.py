@@ -2,11 +2,14 @@ from aiogram import types, Dispatcher
 from aiogram.dispatcher import FSMContext
 from aiogram.dispatcher.filters import Text, state
 from aiogram.dispatcher.filters.state import State, StatesGroup
-from aiogram.types import ReplyKeyboardRemove
+from aiogram.types import InputFile
+from aiogram.types import InlineKeyboardMarkup, InlineKeyboardButton, ReplyKeyboardMarkup, KeyboardButton, ReplyKeyboardRemove
 import buttons
 import random
 from db.db_main import sql_insert_products
 from google_sheets.sheets import update_google_sheets
+
+CHANNEL_URL = "https://t.me/Atmoscargo"
 
 
 class reg(StatesGroup):
@@ -49,18 +52,22 @@ async def load_phone(message: types.Message, state: FSMContext):
         await sql_insert_products(data['code'], data['fullname'], data['phone'])
 
 
-    await message.answer(
-        text=
-             f'Код: {data["code"]}\n',
-    )
-    await reg.next()
+    keyboard = InlineKeyboardMarkup().add(
+    InlineKeyboardButton("Перейти на наш канал", url=CHANNEL_URL)
+)
 
     await message.answer(
-        text=
-             f'Код: {data["code"]}\n'
-             f'Телефон: 15846020707 \n'
-             f'Адрес: 广州市白云区石沙路石井工业区一横路2号A3栋709室 ({data["code"]})\n',
-    )
+    text='Код: {data["code"]}\n'
+         'Телефон: 15846020707 \n'
+         'Адрес: 广州市白云区石沙路石井工业区一横路2号A3栋709室 ({data["code"]})\n'
+         'Телефонный номер WhatsApp: +99650548008 \n',
+    reply_markup=keyboard
+)
+    photo_path = 'photo.jpeg'
+    photo = InputFile(photo_path)
+    await message.answer_photo(photo=photo,
+                                   caption= 'Образец заполнения адреса:\n',)
+
     await reg.next()
 
     await message.answer(
