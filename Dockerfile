@@ -5,10 +5,8 @@ COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . .
+COPY .env .env
 VOLUME db/store.sqlite
-
-RUN mkdir /app/secrets && mv atmoscargo.json /app/secrets/
-ENV GOOGLE_SHEETS_CREDENTIALS="/app/secrets/atmoscargo.json"
 
 CMD ["python", "main.py"]
 
