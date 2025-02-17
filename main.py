@@ -6,16 +6,12 @@ from config import bot, dp, admin
 from db import db_main
 from handlers import commands, echo, start_reg, track
 
-
-
 async def on_startup(_):
     # for i in admin:
     #     await bot.send_message(chat_id=i, text="Здравствуйте, я Атмоскарго бот!\n"
     #         " Я помогу вам получить код",
     #                            reply_markup=start_test)
     await db_main.sql_create()
-
-
 
 commands.register_commands(dp)
 track.register_track(dp)
